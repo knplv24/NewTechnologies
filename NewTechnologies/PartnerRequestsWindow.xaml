@@ -1,0 +1,27 @@
+﻿<Window x:Class="NewTechnologies.PartnerRequestsMaterialForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Расчет материала" Height="400" Width="516" FontSize="16" FontFamily="Bahnschrift Light SemiCondensed" Icon="/img/Новые технологии.png">
+    <Grid>
+        <Label Content="Тип продукции:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="30" Width="150"/>
+        <ComboBox x:Name="ProductTypeCombo" HorizontalAlignment="Left" Margin="230,9,0,0" VerticalAlignment="Top" Width="250" Height="30"/>
+
+        <Label Content="Тип материала:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="30" Width="150"/>
+        <ComboBox x:Name="MaterialTypeCombo" HorizontalAlignment="Left" Margin="230,49,0,0" VerticalAlignment="Top" Width="250" Height="30"/>
+
+        <Label Content="Количество продукции:" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="30" Width="205"/>
+        <TextBox x:Name="RequiredQuantityBox" HorizontalAlignment="Left" Margin="230,89,0,0" VerticalAlignment="Top" Width="250" Height="30"/>
+
+        <Label Content="Количество на складе:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Height="30" Width="205"/>
+        <TextBox x:Name="StockQuantityBox" HorizontalAlignment="Left" Margin="230,129,0,0" VerticalAlignment="Top" Width="250" Height="30"/>
+
+        <Label Content="Параметр 1:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Height="30" Width="150"/>
+        <TextBox x:Name="Param1Box" HorizontalAlignment="Left" Margin="230,169,0,0" VerticalAlignment="Top" Width="250" Height="30"/>
+
+        <Label Content="Параметр 2:" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Height="30" Width="150"/>
+        <TextBox x:Name="Param2Box" HorizontalAlignment="Left" Margin="230,209,0,0" VerticalAlignment="Top" Width="250" Height="30"/>
+
+        <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="230,259,0,0" VerticalAlignment="Top" Width="250" Height="35" Click="Calculate_Click" Background="#FF546F94" Foreground="White" FontWeight="Bold"/>
+        <TextBlock x:Name="ResultText" HorizontalAlignment="Left" Margin="10,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="410" Foreground="#FF0C4882" FontWeight="Bold"/>
+    </Grid>
+</Window>

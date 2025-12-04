@@ -1,0 +1,78 @@
+﻿<Window x:Class="NewTechnologies.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewTechnologies"
+        mc:Ignorable="d"
+        Title="Просмотр заявок партнеров" Height="500" Width="850" FontFamily="Bahnschrift Light SemiCondensed" FontSize="14" Icon="/img/Новые технологии.png">
+
+    <Grid Background="White" Margin="10">
+
+        <!-- Заголовок -->
+        <TextBlock Text="Заявки партнёров" FontSize="26" FontWeight="Bold"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="89,10,0,0" />
+
+        <!-- Логотип -->
+        <Image HorizontalAlignment="Left" Height="42" Margin="10,10,0,0"
+               VerticalAlignment="Top" Width="51" Source="/Новые технологии.png"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0">
+            <Button x:Name="AddRequestButton" Content="Добавить заявку" Width="120" Height="30" Margin="0,0,5,0" Click="AddRequestButton_Click" Background="White" BorderBrush="#FF0C4882" Foreground="#FF0C4882" FontWeight="Bold"/>
+            <Button x:Name="EditRequestButton" Content="Редактировать заявку" Width="140" Height="30" Click="EditRequestButton_Click" Background="White" BorderBrush="#FF0C4882" Foreground="#FF0C4882" FontWeight="Bold"/>
+            <Button x:Name="OpenProductsButton" Content="Расчет материала" Width="150" Height="30" Margin="5,0,0,0" Click="OpenProductsButton_Click" Background="White" BorderBrush="#FF0C4882" Foreground="#FF0C4882" FontWeight="Bold"/>
+        </StackPanel>
+
+
+        <!-- Список заявок -->
+        <ListView x:Name="RequestsList" Margin="0,60,0,0" 
+                  BorderThickness="0" Background="#FFBBDCFA"
+                  HorizontalContentAlignment="Stretch"
+                  VerticalAlignment="Stretch">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Gray" BorderThickness="1"
+                            CornerRadius="3" Margin="5" Padding="10"
+                            Background="White">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0">
+                                <TextBlock FontSize="14" FontWeight="Bold">
+                                    <Run Text="{Binding PartnerType}"/> 
+                                    <Run Text=" | "/>
+                                    <Run Text="{Binding PartnerName}"/>
+                                </TextBlock>
+
+                                <TextBlock Margin="0,4,0,0">
+                                    <Run Text="Юридический адрес: "/>
+                                    <Run Text="{Binding Address}"/>
+                                </TextBlock>
+
+                                <TextBlock Margin="0,4,0,0">
+                                    <Run Text="Телефон: "/>
+                                    <Run Text="{Binding Phone}"/>
+                                </TextBlock>
+
+                                <TextBlock Margin="0,4,0,0">
+                                    <Run Text="Рейтинг: "/>
+                                    <Run Text="{Binding Rating}"/>
+                                </TextBlock>
+                            </StackPanel>
+
+                            <TextBlock Grid.Column="1" HorizontalAlignment="Right"
+                                       VerticalAlignment="Top"
+                                       FontSize="16" FontWeight="Bold"
+                                       Text="{Binding Cost, StringFormat={}{0:0.00} р}" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</Window>

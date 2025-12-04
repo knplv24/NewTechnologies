@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="622b3ebce5544e0ab21133149f04ef74" Name="Diagram1">
+        <EntityTypeShape EntityType="CompanyModel.Материал" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyModel.Партнер" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyModel.Поставка_продукта" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyModel.Продукт" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyModel.Состав_продукта" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyModel.Тип_материала" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyModel.Тип_партнера" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="CompanyModel.Тип_продукта" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="CompanyModel.FK_Материал_Тип_материала" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyModel.FK_Состав_продукта_Материал" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyModel.FK_Партнер_Тип_партнера" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyModel.FK_Поставка_продукта_Партнер" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyModel.FK_Поставка_продукта_Продукт" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyModel.FK_Продукт_Тип_продукта" ManuallyRouted="false" />
+        <AssociationConnector Association="CompanyModel.FK_Состав_продукта_Продукт" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
